@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: open-python
+Version: 1.1.1
+Summary: Cross platform wrapper for opening a file/URL with system default application
+Home-page: https://github.com/panda2134/open-python
+Author: skratchdot
+License: MIT
+Keywords: cross platform,xdg-open,open,start,desktop
+Platform: UNKNOWN
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Desktop Environment
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: six
+
+# open
+
+## Description ##
+
+Open a file, directory, or URI using the OS's default application for
+that object type. Optionally, you can specify an application to use.
+
+This is a proxy for the following commands:
+
+        OSX: "open"
+    Windows: "start"
+Linux/Other: "xdg-open"
+
+This is a python port of the node.js module:
+https://github.com/pwnall/node-open
+
+
+## Import ##
+
+```python
+import open_python
+```
+
+## Usage ##
+
+### open google.com in the user's default browser:
+
+```python
+open_python.start("https://google.com/")
+```
+### you can specify the program to use:
+
+```python
+open_python.start("https://google.com/", "firefox")	
+```
+
+## use in command line
+
+```sh
+$ python -m open_python https://google.com/
+```
+
+## License ##
+
+Copyright (c) 2013 skratchdot  
+Licensed under the MIT license.
+## Contributors ##
+
+skratchdot
+panda2134
+
